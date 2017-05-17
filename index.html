@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style/jquery.fullpage.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="script/scrolloverflow.min.js"></script>
+    <script type="text/javascript" src="script/jquery.fullpage.js"></script>
+    <style>
+      html {
+        font-family: Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif; 
+        color: white;
+      }
+      p {
+        margin: 0;
+        margin-bottom: 12px;
+      }
+      #statie-8-wenende-vrouwen {
+        background-image: url('img/statie-8-wenende-vrouwen.jpg');
+        background-size: cover;
+        background-position: center 30%;
+      }
+      .slide {
+        position: relative;
+      }
+      .titel,.citaat,.evangelie {
+        box-shadow: 0px -20px 20px rgba(86, 132, 187, 0.7);
+        background-color: rgba(86, 132, 187, 0.7);
+        bottom: 0px;
+        left: 0px;
+        position: absolute;
+        width: 100%;
+        max-height: 100%;
+      }
+      .overweging,.gebed {
+        background-color: rgba(86, 132, 187, 1);
+        position:fixed;
+        height: 0;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        overflow: scroll;
+      }
+      .titel {
+        font-weight: bold;
+        font-size: 28pt;
+      }
+      .citaat {
+        font-weight: bold;
+        font-size: 20pt;
+        font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif; 
+        font-style: italic;
+      }
+      .evangelie {
+        font-size: 12pt;
+      }
+      .overweging {
+
+      }
+      .gebed {
+      }
+      .content {
+        margin: 20px 60px;
+        max-width: 767px;
+        text-align: center;
+      }
+      .text {
+        columns: 150px 3;
+        -webkit-columns: 150px 3;
+        -moz-columns: 150px 3;
+        text-align: justify;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="fullpage">
+      <div class="section" id="statie-8-wenende-vrouwen" data-anchor="section-statie-8-wenende-vrouwen">
+        <div class="slide">
+          <div class="titel">
+            <div class="content">Jezus troost de wenende vrouwen</div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="citaat">
+            <div class="content">"Weent niet over Mij, maar weent over uzelf…"</div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="evangelie">
+            <div class="content">
+              <p><i>Uit het heilig Evangelie volgens Lucas (Lc. 23, 28-31).</i></p> 
+              <div class="text">
+                <p>Jezus keerde zich tot hen en sprak: 'Dochters van Jeruzalem, weent niet over Mij, maar weent over uzelf en over uw kinderen. Weet dat er een tijd zal komen waarop men zeggen zal: Gelukkig de onvruchtbaren, wier schoot niet heeft gebaard en wier borst geen kind heeft gevoed. Dan zal men tot de bergen zeggen: Valt op ons, en tot de heuvels: Bedekt ons. Want als men zo doet met het groene hout, wat zal er dan met het dorre gebeuren?'</p>
+                <button name="overweging" class="modal">Overweging</button>
+                <button name="gebed" class="modal">Gebed</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section" data-anchor="statie-">
+        <div class="slide"> Slide 1 </div>
+        <div class="slide"> Slide 2 </div>
+        <div class="slide"> Slide 3 </div>
+        <div class="slide"> Slide 4 </div>
+      </div>
+    </div>
+    <div class="overweging statie-8-wenende-vrouwen">
+      <div class="content">
+        <h2>OVERWEGING</h2>
+        <div class="text">
+          <p>Het stemt ons tot nadenken, zo streng als Jezus tot de wenende vrouwen spreekt, die Hem toch begeleiden en om Hem weeklagen. Hoe moeten we dat verstaan? Voelen we daarin niet het verwijt tegen een louter sentimentele vroomheid, die niet tot bekering wordt en tot geleefd geloof? Het is niet genoeg met woorden en gevoelens te klagen over al het lijden van deze wereld, terwijl ons leven toch verder gaat zoals het altijd was. Daarom maakt de Heer ons opmerkzaam op het gevaar waarin wij zelf leven. Hij laat ons de ernst zien van de zonde en de ernst van het oordeel. Zijn wij niet al te zeer geneigd om, bij alle verontwaardigde woorden over het kwaad en het lijden van de onschuldigen, het mysterie van het kwaad te bagatelliseren? Laten wij van het beeld van God en van Jezus niet uiteindelijk toch alleen maar het zachte en lieve over, en hebben wij het oordeel niet in stilte geschrapt? God kan toch onze zwakheid niet zo tragisch nemen, denken wij; wij zijn immers maar mensen. Maar aan het lijden van de Zoon zien we, hoe ernstig de zonde is, hoe ze moet worden uitgeleden om overwonnen te worden. Voor de gestalte van de lijdende Heer eindigt de banalisering van het kwaad. Ook tegen ons zegt Hij: "Weent niet over Mij, maar weent over uzelf. …Want als men zo doet met het groene hout, wat zal er dan met het dorre gebeuren?"</p>
+          <button class="close_modal">Voortgaan</button>
+        </div>
+      </div>
+    </div>
+    <div class="gebed statie-8-wenende-vrouwen">
+      <div class="content">
+        <h2>GEBED</h2>
+        <div class="text">
+          <p>Heer, U hebt tot de wenende vrouwen van boete gesproken, van de dagen van het oordeel waarop wij voor uw aanschijn, voor het aanschijn van de Rechter der wereld zullen staan. U roept ons weg uit de bagatellisering van het kwaad, waarmee wij onszelf geruststellen om rustig verder te kunnen leven. U laat ons de ernst zien van onze verantwoordelijkheid, het gevaar dat wij bij het oordeel schuldig en zonder vrucht bevonden worden. Help ons dat wij niet alleen maar klagend en met woorden met U meelopen. Bekeer ons en geef ons nieuw leven. Laat niet toe dat wij uiteindelijk als dor hout daar staan, maar maak dat wij levende twijgen worden aan U, de wijnstok, en vrucht dragen voor het eeuwige leven.</p>
+<p>Allen:</p>
+<p>Onze Vader <br/>
+die in de hemel zijt;<br/>
+uw naam worde geheiligd;<br/>
+uw rijk kome;<br/>
+uw wil geschiede <br/>
+op aarde zoals in de hemel.<br/>
+Geef ons heden ons dagelijks brood;<br/>
+en vergeef ons onze schuld,<br/>
+zoals ook wij aan anderen <br/>
+hun schuld vergeven;<br/>
+en leid ons niet in bekoring;<br/>
+maar verlos ons van het kwade.</p>
+          <button class="close_modal">Voortgaan</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    $(document).ready(function() {
+      $('#fullpage').fullpage({
+        loopHorizontal: false,
+      });
+      $('button.modal').on('click', function(){
+        $.fn.fullpage.setAllowScrolling(false);
+        $.fn.fullpage.setKeyboardScrolling(false);
+        var id = $(this).closest('.section').attr('id');
+        var name = $(this).attr('name');
+        var modal = $('.'+id+'.'+name);
+        modal.height('100%');
+        window.open_modal = modal;
+      });
+      $('button.close_modal').on('click', function(){
+        $.fn.fullpage.setAllowScrolling(true);
+        $.fn.fullpage.setKeyboardScrolling(true);
+        window.open_modal.height('0');
+      });
+    });
+  </script>
+</html>

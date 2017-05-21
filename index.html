@@ -3,29 +3,47 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style/jquery.fullpage.css" />
+    <link href="https://fonts.googleapis.com/css?family=Alegreya:400i|Hammersmith+One" rel="stylesheet">
     <script type="text/javascript" src="script/jquery.min.js"></script>
-    <script type="text/javascript" src="script/scrolloverflow.min.js"></script>
     <script type="text/javascript" src="script/jquery.fullpage.js"></script>
     <style>
       html {
-        font-family: Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif; 
+        font-family: 'Hammersmith One', sans-serif;
         color: white;
       }
       p {
         margin: 0;
         margin-bottom: 12px;
       }
+      i {
+        font-family: 'Alegreya', cursive; 
+        font-style: normal;
+      }
       #statie-8-wenende-vrouwen {
         background-image: url('img/statie-8-wenende-vrouwen.jpg');
         background-size: cover;
-        background-position: center 30%;
+        background-position: center 40%;
+      }
+      #statie-8-wenende-vrouwen .pane {
+        background: #0288D1;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to bottom, #03A9F4, #0288D1);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to bottom, #03A9F4, #0288D1); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      }
+      #statie-10-ontkleding {
+        background-image: url('img/statie-10-ontkleding.jpg');
+        background-size: cover;
+        background-position: center 50%;
+      }
+      #statie-10-ontkleding .pane {
+        background: #388E3C;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to bottom, #4CAF50, #388E3C);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to bottom, #4CAF50, #388E3C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
       }
       .slide {
         position: relative;
       }
       .titel,.citaat,.evangelie {
-        box-shadow: 0px -20px 20px rgba(86, 132, 187, 0.7);
-        background-color: rgba(86, 132, 187, 0.7);
+        border-top: 5px solid white;
         bottom: 0px;
         left: 0px;
         position: absolute;
@@ -33,7 +51,10 @@
         max-height: 100%;
       }
       .overweging,.gebed {
-        background-color: rgba(86, 132, 187, 1);
+        background: #455A64;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to bottom, #607D8B, #455A64);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to bottom, #607D8B, #455A64); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        color: white;
         position:fixed;
         height: 0;
         bottom: 0px;
@@ -42,14 +63,11 @@
         overflow: scroll;
       }
       .titel {
-        font-weight: bold;
         font-size: 28pt;
       }
       .citaat {
-        font-weight: bold;
         font-size: 20pt;
-        font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif; 
-        font-style: italic;
+        font-family: 'Alegreya', cursive; 
       }
       .evangelie {
         font-size: 12pt;
@@ -60,15 +78,67 @@
       .gebed {
       }
       .content {
-        margin: 20px 60px;
+        padding: 60px;
         max-width: 767px;
+        margin-left: auto;
+        margin-right: auto;
         text-align: center;
       }
       .text {
-        columns: 150px 3;
-        -webkit-columns: 150px 3;
-        -moz-columns: 150px 3;
+        columns: 200px 3;
+        -webkit-columns: 200px 3;
+        -moz-columns: 200px 3;
         text-align: justify;
+      }
+      #fp-nav {
+        top: 10%;
+      }
+      #fp-nav ul li a span, .fp-slidesNav ul li a span {
+        background: white;
+      }
+      button {
+        position: relative;
+        margin: 30px auto;
+        padding: 0;
+        overflow: hidden;
+        border-width: 0;
+        outline: none;
+        border-radius: 2px;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+        background-color: #455A64;
+        color: white;
+        transition: background-color .3s;
+      }
+      button:hover, button:focus {
+        background-color: #607D8B;
+      }
+      button > * {
+        position: relative;
+      }
+      button span {
+        display: block;
+        padding: 12px 24px;
+      }
+     button:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: block;
+        width: 0;
+        padding-top: 0;
+        border-radius: 100%;
+        background-color: rgba(236, 240, 241, .3);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+      button:active:before {
+        width: 120%;
+        padding-top: 120%;
+        transition: width .2s ease-out, padding-top .2s ease-out;
       }
     </style>
   </head>
@@ -76,45 +146,83 @@
     <div id="fullpage">
       <div class="section" id="statie-8-wenende-vrouwen" data-anchor="section-statie-8-wenende-vrouwen">
         <div class="slide">
-          <div class="titel">
-            <div class="content">Jezus troost de wenende vrouwen</div>
+          <div class="pane titel">
+            <div class="content">Achtste Statie:<br/>Jezus troost de wenende vrouwen</div>
           </div>
-        </div>
+        </div><!--slide-->
         <div class="slide">
-          <div class="citaat">
+          <div class="pane citaat">
             <div class="content">"Weent niet over Mij, maar weent over uzelf…"</div>
           </div>
-        </div>
+        </div><!--slide-->
         <div class="slide">
-          <div class="evangelie">
+          <div class="pane evangelie">
             <div class="content">
               <p><i>Uit het heilig Evangelie volgens Lucas (Lc. 23, 28-31).</i></p> 
               <div class="text">
                 <p>Jezus keerde zich tot hen en sprak: 'Dochters van Jeruzalem, weent niet over Mij, maar weent over uzelf en over uw kinderen. Weet dat er een tijd zal komen waarop men zeggen zal: Gelukkig de onvruchtbaren, wier schoot niet heeft gebaard en wier borst geen kind heeft gevoed. Dan zal men tot de bergen zeggen: Valt op ons, en tot de heuvels: Bedekt ons. Want als men zo doet met het groene hout, wat zal er dan met het dorre gebeuren?'</p>
-                <button name="overweging" class="modal">Overweging</button>
-                <button name="gebed" class="modal">Gebed</button>
               </div>
+              <button name="overweging" class="modal"><span>Overweging</span></button>
+              <button name="gebed" class="modal"><span>Gebed</span></button>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="section" data-anchor="statie-">
-        <div class="slide"> Slide 1 </div>
-        <div class="slide"> Slide 2 </div>
-        <div class="slide"> Slide 3 </div>
-        <div class="slide"> Slide 4 </div>
-      </div>
+        </div><!--slide-->
+        <div class="slide">
+          <div class="pane citaat">
+            <div class="content">Liet uw Zoon om mijne zonden, Zich uit liefde zo verwonden, dan moog ik delen in zijn smart!</div>
+          </div>
+        </div><!--slide-->
+        <div class="slide">
+          <div class="pane citaat">
+            <div class="content">"Help ons dat wij niet alleen maar klagend en met woorden met U meelopen"</div>
+          </div>
+        </div><!--slide-->
+      </div><!--section-->
+      <div class="section" id="statie-10-ontkleding" data-anchor="section-statie-10-ontkleding">
+        <div class="slide">
+          <div class="pane titel">
+            <div class="content">Tiende Statie:<br/>Jezus wordt van zijn kleren beroofd</div>
+          </div>
+        </div><!--slide-->
+        <div class="slide">
+          <div class="pane citaat">
+            <div class="content">"De ontkleedde Jezus herinnert ons er aan, dat wij allen het 'eerste kleed', de afglans van God verloren hebben."</div>
+          </div>
+        </div><!--slide-->
+        <div class="slide">
+          <div class="pane evangelie">
+            <div class="content">
+              <p><i>Uit het heilig Evangelie volgens Matteüs (Mt. 27, 33-36).</i></p> 
+              <div class="text">
+                <p>Gekomen op een plaats die Golgota genoemd wordt - dat wil zeggen Schedelplaats - gaven ze Hem met alsem gemengde wijn te drinken. Nadat ze Hem gekruisigd hadden, verdeelden ze zijn kleren onder elkaar door er om te dobbelen; en daar neergezeten bleven ze de wacht bij Hem houden.</p>
+              </div>
+              <button name="overweging" class="modal"><span>Overweging</span></button>
+              <button name="gebed" class="modal"><span>Gebed</span></button>
+            </div>
+          </div>
+        </div><!--slide-->
+        <div class="slide">
+          <div class="pane citaat">
+            <div class="content">Doe mijn hart voor Jezus branden, vlecht Gijzelf de liefdesbanden, dat ik God behaag alleen.</div>
+          </div>
+        </div><!--slide-->
+        <div class="slide">
+          <div class="pane citaat">
+            <div class="content">"Jezus, aan de schande prijsgegeven… schenk ons eerbied voor de mens"</div>
+          </div>
+        </div><!--slide-->
+      </div><!--section-->
     </div>
-    <div class="overweging statie-8-wenende-vrouwen">
+    <div class="pane overweging statie-8-wenende-vrouwen">
       <div class="content">
         <h2>OVERWEGING</h2>
         <div class="text">
           <p>Het stemt ons tot nadenken, zo streng als Jezus tot de wenende vrouwen spreekt, die Hem toch begeleiden en om Hem weeklagen. Hoe moeten we dat verstaan? Voelen we daarin niet het verwijt tegen een louter sentimentele vroomheid, die niet tot bekering wordt en tot geleefd geloof? Het is niet genoeg met woorden en gevoelens te klagen over al het lijden van deze wereld, terwijl ons leven toch verder gaat zoals het altijd was. Daarom maakt de Heer ons opmerkzaam op het gevaar waarin wij zelf leven. Hij laat ons de ernst zien van de zonde en de ernst van het oordeel. Zijn wij niet al te zeer geneigd om, bij alle verontwaardigde woorden over het kwaad en het lijden van de onschuldigen, het mysterie van het kwaad te bagatelliseren? Laten wij van het beeld van God en van Jezus niet uiteindelijk toch alleen maar het zachte en lieve over, en hebben wij het oordeel niet in stilte geschrapt? God kan toch onze zwakheid niet zo tragisch nemen, denken wij; wij zijn immers maar mensen. Maar aan het lijden van de Zoon zien we, hoe ernstig de zonde is, hoe ze moet worden uitgeleden om overwonnen te worden. Voor de gestalte van de lijdende Heer eindigt de banalisering van het kwaad. Ook tegen ons zegt Hij: "Weent niet over Mij, maar weent over uzelf. …Want als men zo doet met het groene hout, wat zal er dan met het dorre gebeuren?"</p>
-          <button class="close_modal">Voortgaan</button>
         </div>
+        <button class="close_modal"><span>Voortgaan</span></button>
       </div>
-    </div>
-    <div class="gebed statie-8-wenende-vrouwen">
+    </div><!-- overweging -->
+    <div class="pane gebed statie-8-wenende-vrouwen">
       <div class="content">
         <h2>GEBED</h2>
         <div class="text">
@@ -132,15 +240,48 @@ zoals ook wij aan anderen <br/>
 hun schuld vergeven;<br/>
 en leid ons niet in bekoring;<br/>
 maar verlos ons van het kwade.</p>
-          <button class="close_modal">Voortgaan</button>
         </div>
+        <button class="close_modal"><span>Voortgaan</span></button>
       </div>
-    </div>
+    </div><!-- gebed -->
+    <div class="pane overweging statie-10-ontkleding">
+      <div class="content">
+        <h2>OVERWEGING</h2>
+        <div class="text">
+          <p>Jezus wordt van zijn kleren beroofd. De kleding geeft aan de mens zijn sociale positie; zij voegt hem in de samenleving in, maakt hem tot iemand. Openlijk van zijn kleren ontdaan worden, betekent voor Jezus dat Hij nu niets meer is - een uitgestotene, aan de verachting prijsgegeven. Het moment dat Hij uitgekleed wordt, herinnert ons ook aan de verdrijving uit het paradijs: de goddelijke afglans is van de mens af, nu ontdekt hij dat hij naakt is, te kijk gezet, en ontbloot, en hij schaamt zich. Jezus neemt zo de situatie van de gevallen mens nog een keer op zich. De ontkleedde Jezus herinnert ons er aan, dat wij allen het "eerste kleed", de afglans van God verloren hebben. Onder het kruis dobbelen de soldaten vervolgens om zijn armzalig bezit, om het kleed. De evangelisten verhalen dit met woorden uit Psalm 22, 19 6 en zeggen daarmee wat Jezus na de verrijzenis tegen de leerlingen van Emmaüs zal zeggen: dat dit alles "volgens de Schriften"is gebeurd. Niets is hier puur toeval, alles wat hier gebeurt is geborgen in Gods woord en wordt door zijn goddelijke betekenis gedragen. De Heer gaat hier door alle staties en gradaties van het menselijk verloren-zijn heen, en elke trap is in alle bitterheid een stap verder in de verlossing. Juist zo brengt Hij het verloren schaap weer thuis. Herinneren we ons ook nog dat Johannes vertelt dat er om de lijfrok werd geloot, die aan één stuk van bovenaf geweven was (Joh. 19, 23). Wij mogen daarin een zinspeling zien op het kleed van de hogepriester, dat "uit één enkele draad geweven" was, zonder naad 7. Hij, de Gekruisigde, is inderdaad de ware Hogepriester.</p>
+        </div>
+        <button class="close_modal"><span>Voortgaan</span></button>
+      </div>
+    </div><!-- overweging -->
+    <div class="pane gebed statie-10-ontkleding">
+      <div class="content">
+        <h2>GEBED</h2>
+        <div class="text">
+          <p>Heer Jezus, men heeft U van uw kleren beroofd, U aan de schande prijsgegeven en uit de samenleving verstoten. U draagt de schande van Adam en heelt die. U draagt het lijden en de nood van de armen, die uit de wereld verstoten zijn. Maar juist zo vervult U het woord van de profeten. Juist zo brengt U zin in de schijnbare zinloosheid. Juist zo laat U ons inzien dat uw Vader U en ons en de wereld in handen houdt. Schenk ons eerbied voor de mens in alle fasen van zijn bestaan en in alle situaties waar we hem in aantreffen. Schenk ons het lichtende kleed van uw genade.</p>
+<p>Allen:</p>
+<p>Onze Vader <br/>
+die in de hemel zijt;<br/>
+uw naam worde geheiligd;<br/>
+uw rijk kome;<br/>
+uw wil geschiede <br/>
+op aarde zoals in de hemel.<br/>
+Geef ons heden ons dagelijks brood;<br/>
+en vergeef ons onze schuld,<br/>
+zoals ook wij aan anderen <br/>
+hun schuld vergeven;<br/>
+en leid ons niet in bekoring;<br/>
+maar verlos ons van het kwade.</p>
+        </div>
+        <button class="close_modal"><span>Voortgaan</span></button>
+      </div>
+    </div><!-- gebed -->
   </body>
   <script>
     $(document).ready(function() {
       $('#fullpage').fullpage({
         loopHorizontal: false,
+        navigation: true,
+        navigationPosition: 'left'
       });
       $('button.modal').on('click', function(){
         $.fn.fullpage.setAllowScrolling(false);
@@ -149,12 +290,14 @@ maar verlos ons van het kwade.</p>
         var name = $(this).attr('name');
         var modal = $('.'+id+'.'+name);
         modal.height('100%');
+        $('#fp-nav').hide();
         window.open_modal = modal;
       });
       $('button.close_modal').on('click', function(){
         $.fn.fullpage.setAllowScrolling(true);
         $.fn.fullpage.setKeyboardScrolling(true);
         window.open_modal.height('0');
+        $('#fp-nav').show();
       });
     });
   </script>
